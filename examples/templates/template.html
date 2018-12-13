@@ -1,0 +1,30 @@
+<html>
+<head>
+<title>HOME</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link
+	href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"
+	rel="stylesheet" media="screen">
+<style type="text/css">
+.container {
+	max-width: 500px;
+	padding-top: 100px;
+}
+</style>
+</head>
+<body>
+	<div class="container">
+		<h1>Test webpage</h1>
+		<p>This webpage contains a form with a select</p>
+		<p>Individuals in the validation set:</p>
+		<form action="./classify" method="POST">
+			<select name="individual">
+				{% for individual in validationSet %}
+				<option value="{{individual}}">{{individual}}</option>
+				{% endfor %}
+			</select>
+			<input type="submit" value="classify" />
+		</form>
+	</div>
+</body>
+</html>
