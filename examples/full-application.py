@@ -213,7 +213,11 @@ def classifyTestExamples(classifier):
 @app.route("/")
 def webapp():
     
-        
+    # The template allInOne.html can be found under the templates folder.
+    # The templates accepts three variables:
+    # - stats, which is obtained with the computeStats() function;
+    # - metrics, which is obtained with the computeMetrics() function;
+    # - predictions, which is obtained with the classifyTestExamples() function.
     return render_template('allInOne.html', stats=stats, metrics=metrics, predictions=tests)
 
 if __name__ == '__main__':
