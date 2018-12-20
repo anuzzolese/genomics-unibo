@@ -223,6 +223,8 @@ def webapp():
 if __name__ == '__main__':
     classifier = GaussianNB()
     
+    # We create the static folder that we will use for saving the image of the confusion matrix.
+    # The static folder is then used by the HTML template engine (i.e. Flask) as default target for images. 
     if not os.path.exists("static"):
         os.mkdir("static")
     stats = computeStats()
