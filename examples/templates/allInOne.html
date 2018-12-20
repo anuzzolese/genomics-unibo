@@ -1,0 +1,51 @@
+<html>
+<head>
+<title>HOME</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link
+	href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"
+	rel="stylesheet" media="screen">
+<style type="text/css">
+.container {
+	max-width: 500px;
+	padding-top: 100px;
+}
+</style>
+</head>
+<body>
+	<div class="container">
+		<h1>All in one</h1>
+		<h2>GENO statistics</h2>
+		<div>
+			<p># of individuals in the training graph: {{stats.trainingGraphStats}}</p>
+		</div>
+		<div>
+			<p># of individuals in the test graph: {{stats.testGraphStats}}</p>
+		</div>
+		<div>
+			<p># of individuals in the evaluation graph: {{stats.validationGraphStats}}</p>
+		</div>
+		<h2>Machine learning evaluation metrics</h2>
+		<h3>Precision/recall/f-measure</h3>
+		<div>
+			<p>Precision: {{metrics.precision}}</p>
+		</div>
+		<div>
+			<p>Recall: {{metrics.recall}}</p>
+		</div>
+		<div>
+			<p>F1-measure: {{metrics.f1}}</p>
+		</div>
+		<h3>
+			<p>Confusion matrix <img src="{{metrics.confusion_matrix}}" alt="Confusion matrix" /></p>
+		</h3>
+		<h2>Evaluation</h2>
+		<table>
+			<tr><th>Individual</th><th>Prediction</th></tr>
+			{% for prediction in predictions %}
+			<tr><td>{{prediction.id}}</td><td>{{prediction.prediction}}</td></tr>
+			{% endfor %}
+		</table>
+	</div>
+</body>
+</html>
