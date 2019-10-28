@@ -216,9 +216,9 @@ with open('trio.sample.vcf') as csv_file:
         
     '''
     After all rows have been read, we iterate the chromosomes in the dictionary
-    for printing its corresponding number of transitions and transversions.
+    for printing their corresponding numbers of transitions and transversions.
     We iterate chromosomes in the dictionary by actually iterating dictionary's keys (i.e. chromosome names in our specific case)
-    and then we use the keys for getting their associated values (i.e. chromosome instances) from the dictionary.
+    and then we use the keys for getting chromosome instances from the dictionary.
     '''
     for key in chromosomeDict.keys():
         chromosome = chromosomeDict[key]
