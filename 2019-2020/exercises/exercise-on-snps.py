@@ -110,7 +110,8 @@ class Chromosome:
 
     '''
     def count_transitions(self):
-    	''' We initialise the variable transitions to 0. 
+    	
+        ''' We initialise the variable transitions to 0. 
     	Such a variable represents the counter of the number of transitions.
     	'''
         transitions = 0
@@ -178,7 +179,8 @@ with open('trio.sample.vcf') as csv_file:
     Each row is returned by the reader as an array of strings.
     '''
     for row in csv_reader:
-    	'''
+        
+        '''
     	Thus we are able to retrieve the fowllowing data:
     	  - the chromosome name at position 0 of the array;
     	  - the SNP's position in the chromosome at position 1;
