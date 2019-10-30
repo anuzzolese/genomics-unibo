@@ -25,7 +25,7 @@ class AlleleVariation(ABC):
     Additionally, we use "pass" as the method body in order to avoid any implmentation.
     '''
     @abstractclassmethod
-    def isTransition(self):
+    def isTransversion(self):
         pass
         
 '''
