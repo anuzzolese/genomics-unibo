@@ -48,3 +48,16 @@ df_corr_ken_cols = df.corr(method='kendall')
 print("----\nPearson correlation on columns: \n", str(df_corr_pears_cols))
 print("----\nSpearman correlation on columns: \n", str(df_corr_spear_cols))
 print("----\nKendall correlation on columns: \n", str(df_corr_ken_cols))
+
+# Pearson, Spearman, and Kendall correlation coefficients computed on rows.
+# DataFrame.corr() does not directly work on rows. Hence, firts we compute
+# the transponse matrix (rows -> cols & cols -> rows) with DataFrame.transpose().
+df_tranpose = df.transpose()
+
+df_corr_pears_rows = df_tranpose.corr(method='pearson')
+df_corr_spear_rows = df_tranpose.corr(method='spearman')
+df_corr_ken_rows = df_tranpose.corr(method='kendall')
+
+print("----\nPearson correlation on rows: \n", str(df_corr_pears_rows))
+print("----\nSpearman correlation on rows: \n", str(df_corr_spear_rows))
+print("----\nKendall correlation on rows: \n", str(df_corr_ken_rows))
