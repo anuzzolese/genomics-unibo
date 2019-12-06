@@ -1,10 +1,10 @@
 ###### Software Applications 2019/2010
 # Project Specification
 ###### Andrea Giovanni Nuzzolese
-#
-#
-#
-#
+
+
+*Note:* The PDF of this document is available [here](./ProjectSpecification.pdf).
+
 ### Input
 The file [gene_table.txt](./dataset/gene_table.txt) contains summary annotation on all human genes, based on the Ensembl annotation
 
