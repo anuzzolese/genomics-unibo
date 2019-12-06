@@ -1,4 +1,4 @@
-# Softare Applications @Genomics-UniBO
+# Software Applications @Genomics-UniBO
 
 This project is associated with the Software Application course at the Genomics degree of the University of Bologna.  
 
