@@ -220,14 +220,15 @@ def webapp():
     # - predictions, which is obtained with the classifyTestExamples() function.
     return render_template('allInOne.html', stats=stats, metrics=metrics, predictions=tests)
 
+if not os.path.exists("static"):
+    os.mkdir("static")
+stats = computeStats()
+metrics = computeMetrics(classifier)
+tests = classifyTestExamples(classifier)
+
 if __name__ == '__main__':
     classifier = GaussianNB()
     
     # We create the static folder that we will use for saving the image of the confusion matrix.
-    # The static folder is then used by the HTML template engine (i.e. Flask) as default target for images. 
-    if not os.path.exists("static"):
-        os.mkdir("static")
-    stats = computeStats()
-    metrics = computeMetrics(classifier)
-    tests = classifyTestExamples(classifier)
+    # The static folder is then used by the HTML template engine (i.e. Flask) as default target for images.
     app.run(debug=True)
