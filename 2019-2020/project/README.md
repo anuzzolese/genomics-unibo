@@ -6,11 +6,11 @@
 *Note:* The PDF of this document is available [here](./ProjectSpecification.pdf).
 
 ### Input
-The file [gene_table.txt](./dataset/gene_table.txt) contains summary annotation on all human genes, based on the Ensembl annotation
+The file [gene_table.txt](./dataset/gene_table.txt) contains summary annotation on all human genes, based on the [Ensembl annotation](http://www.ensembl.org/index.html)
 
 For each gene, this file contains:
- - gene_name based on the HGNC nomenclature;
- - gene_biotype for example protein_coding, pseudogene, lincRNA, miRNA etc;
+ - gene_name based on the [HGNC nomenclature](http://www.genenames.org/);
+ - gene_biotype for example protein_coding, pseudogene, lincRNA, miRNA, [etc.](http://vega.sanger.ac.uk/info/about/gene_and_transcript_types.html);
  - chromosome on which the gene is located;
  - strand on which the gene is located;
  - transcript_count the number of known isoforms of the gene.
