@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <title>SA 2019/2010</title>
+  </head>
+  <body>
+    <h1>Software Applications 2019/2020</h1>
+	
+    <p>This is the web page of the course</p>	
+    
+    {% if session.user %}
+    <p>Welcome {{ session['user'] }}!</p>
+    <p><img src="static/{{ session['user'] }}.png" /></p>
+	<p>The slides are available <a href="slides">here</a>.</p>
+    <p><a href="logout">Logout</a></p>
+    {% else %}
+    <p>
+      <form action="login" method='POST'>
+        Enter name: <input type='text' name='user'> 
+          <input type='submit' value='Submit'>
+      </form>
+    </p> 
+    {% endif %}
+	
+  </body>
+</html>
