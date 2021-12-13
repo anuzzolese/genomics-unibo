@@ -33,7 +33,7 @@ Write a program able to:
  - present the user with relevant outcomes.
 
 The program must be designed and implemented in Python by using the Object-Oriented paradigm and by applying its associated fundamental concepts (i.e. encapsulation, inheritance, data abstraction, and polymorphism) properly. 
-The design must be carried out by drawing CRD cards, class and use case diagrams.
+The design must be carried out by drawing CRD cards and class diagrams.
 Design and implementation choices must be explained into the final project document.
 Additionally, the dataset management and presentation must rely on Pandas (and NumPy) and Flask, respectively.
 
@@ -61,8 +61,6 @@ The program is composed of three main parts, consisting of:
  - **[Part 3]** the part that implements the Web-based user interface (UI). Such a UI provides a list of choices, where each choice enables an analytical objective (cf. Part 2). However, the interaction between the UI and the analytical objectives is always mediated by the software Part 1. The list of choices can be represented as a list of hyperlinks. Each hyperlink is associated with a dedicated view (i.e. a Web page) that shows the outcomes of the analytical operation requested by the user. Again the dedicated view provided by the Web page does not communicate directly with the Part 2, but it communicates with the Part 1. Accordingly the Part 1 is responsible for (i) forwarding the request to the appropriate class/method of Part 2 and (ii) returning the result to the view.
 
 The three parts should be implemented as three separate components, i.e. three Python modules consisting in three separate files.
-The software must be described into a project document by using UML diagrams in order to point out what are: 
- - the use cases; 
- - the structure of classes.
+The software must be described into a project document by using UML diagrams in order to point out what the structure of classes is.
 
 
